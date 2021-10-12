@@ -15,6 +15,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\PostController::class, 'index'])->name('posts.index');
 
+Route::group(['middleware' => 'auth'], function () {
+    Route::group(['prefix' => 'submit', 'as' => 'submit.'], function () {
+        Route::get('/', [App\Http\Controllers\SubmitController::class, 'index'])->name('index');
+    });
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['prefix' => 'js'], function () {
+    Route::get('/getAreas', [App\Http\Controllers\JavaScriptController::class, 'getAreas']);
+});

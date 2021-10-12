@@ -16,7 +16,7 @@ class CreateAreasTable extends Migration
         Schema::create('areas', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->enum('grade', ['小学校', '中学校', '高校']);
+            $table->enum('target', ['小学生', '中学生', '高校生']);
             $table->enum('subject', ['物理', '科学', '生物', '地学', '数学']);
             // $table->timestamps();
         });

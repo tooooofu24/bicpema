@@ -122,15 +122,15 @@ class AreaSeeder extends Seeder
             }
 
             if ($grade == 1) {
-                $grade = '小学校';
+                $grade = '小学生';
             } elseif ($grade == 2) {
-                $grade = '中学校';
+                $grade = '中学生';
             } else {
-                $grade = '高校';
+                $grade = '高校生';
             }
             $data = [
                 'name' => $v,
-                'grade' => $grade,
+                'target' => $grade,
                 'subject' => $subject,
             ];
             DB::table('areas')->insert($data);

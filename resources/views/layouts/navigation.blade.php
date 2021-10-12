@@ -26,6 +26,29 @@
 
     <!-- Volt CSS -->
     <link rel="stylesheet" href="css/volt.css">
+
+    <!-- Font Awsome -->
+    <script src="https://kit.fontawesome.com/34b1e2b6df.js" crossorigin="anonymous"></script>
+
+    <!-- include jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+    <!-- include FilePond library -->
+    <script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
+
+    <!-- include FilePond CSS -->
+    <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+
+    <!-- include FilePond plugins -->
+    <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"></script>
+    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet" />
+
+    <!-- include FilePond jQuery adapter -->
+    <script src="https://unpkg.com/jquery-filepond/filepond.jquery.js"></script>
+
+
+    <!-- JS -->
+    <script src="js/style.js" defer></script>
 </head>
 
 <body>
@@ -50,10 +73,10 @@
                 </div>
                 <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">ホーム</a>
+                        <a href="{{ route('posts.index') }}" class="nav-link">ホーム</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">投稿</a>
+                        <a href="{{ route('submit.index') }}" class="nav-link">投稿</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">マイページ</a>

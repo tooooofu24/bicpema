@@ -23,7 +23,7 @@
         </div>
         @endforeach
     </div>
-    <div class="text-center mt-5">
+    <div class="mt-5">
         {{$posts->links()}}
     </div>
 </div>
