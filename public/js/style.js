@@ -2,6 +2,18 @@
 
     // FilePondの設定
     $.fn.filepond.registerPlugin(FilePondPluginImagePreview);
+    $.fn.filepond.registerPlugin(FilePondPluginFileValidateType);
+
+    var image_pond = $('.image_pond');
+    image_pond.filepond();
+    image_pond.filepond('labelIdle', '<span class="filepond--label-action">サムネイル画像を選択してください</span>');
+    image_pond.filepond('acceptedFileTypes', ['image/*']);
+    image_pond.filepond('storeAsFile', true);
+    var js_pond = $('.js_pond');
+    js_pond.filepond();
+    js_pond.filepond('labelIdle', '<span class="filepond--label-action">JSファイルを選択してください</span>');
+    js_pond.filepond('acceptedFileTypes', ['text/javascript']);
+    js_pond.filepond('storeAsFile', true);
 
     // 投稿画面
     $('select[id="subject"]').on('change', function () {
@@ -41,5 +53,4 @@
             }
         });
     })
-    $('.image_pond').filepond();
 }(jQuery));

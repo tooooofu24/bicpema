@@ -18,6 +18,7 @@ Route::get('/', [App\Http\Controllers\PostController::class, 'index'])->name('po
 Route::group(['middleware' => 'auth'], function () {
     Route::group(['prefix' => 'submit', 'as' => 'submit.'], function () {
         Route::get('/', [App\Http\Controllers\SubmitController::class, 'index'])->name('index');
+        Route::post('/', [App\Http\Controllers\SubmitController::class, 'store'])->name('store');
     });
 });
 

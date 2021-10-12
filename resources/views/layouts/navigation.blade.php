@@ -42,6 +42,7 @@
     <!-- include FilePond plugins -->
     <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"></script>
     <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet" />
+    <script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
 
     <!-- include FilePond jQuery adapter -->
     <script src="https://unpkg.com/jquery-filepond/filepond.jquery.js"></script>
