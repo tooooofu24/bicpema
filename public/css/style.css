@@ -6,3 +6,6 @@
 .table th {
     white-space: normal;
 }
+.canvas {
+            display: block;
+        }

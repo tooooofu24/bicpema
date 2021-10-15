@@ -22,6 +22,7 @@ Route::group(['middleware' => 'auth'], function () {
     });
     Route::group(['prefix' => 'posts', 'as' => 'posts.'], function () {
         Route::get('/{id}', [App\Http\Controllers\PostController::class, 'showPost'])->name('showPost');
+        Route::get('/{id}/run', [App\Http\Controllers\PostController::class, 'run'])->name('run');
     });
 });
 

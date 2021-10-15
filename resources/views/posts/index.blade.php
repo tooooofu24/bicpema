@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="d-flex align-items-center justify-content-end">
-            <a href="" class="btn btn-primary me-3">実行</a>
+            <a href="{{ route('posts.run', ['id'=>$post->id]) }}" class="btn btn-primary me-3">実行</a>
             <a href=""><i class="fas fa-download fa-2x"></i></a>
         </div>
     </div>

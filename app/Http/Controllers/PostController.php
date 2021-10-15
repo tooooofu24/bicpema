@@ -19,4 +19,10 @@ class PostController extends Controller
         $post = Post::with('area', 'user')->find($id);
         return view('posts.index', compact('post'));
     }
+
+    public function run($id)
+    {
+        $post = Post::find($id);
+        return view('posts.run', compact('post'));
+    }
 }
