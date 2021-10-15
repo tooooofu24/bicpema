@@ -20,6 +20,9 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/', [App\Http\Controllers\SubmitController::class, 'index'])->name('index');
         Route::post('/', [App\Http\Controllers\SubmitController::class, 'store'])->name('store');
     });
+    Route::group(['prefix' => 'posts', 'as' => 'posts.'], function () {
+        Route::get('/{id}', [App\Http\Controllers\PostController::class, 'showPost'])->name('showPost');
+    });
 });
 
 Auth::routes();

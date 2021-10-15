@@ -9,11 +9,15 @@
     image_pond.filepond('labelIdle', '<span class="filepond--label-action">サムネイル画像を選択してください</span>');
     image_pond.filepond('acceptedFileTypes', ['image/*']);
     image_pond.filepond('storeAsFile', true);
+    image_pond.filepond('labelFileTypeNotAllowed', '画像ファイルを選択してください！');
+    image_pond.filepond('fileValidateTypeLabelExpectedTypes', '{lastType}形式のファイルがアップロードできます');
     var js_pond = $('.js_pond');
     js_pond.filepond();
     js_pond.filepond('labelIdle', '<span class="filepond--label-action">JSファイルを選択してください</span>');
     js_pond.filepond('acceptedFileTypes', ['text/javascript']);
     js_pond.filepond('storeAsFile', true);
+    js_pond.filepond('labelFileTypeNotAllowed', 'JSファイルを選択してください！');
+    js_pond.filepond('fileValidateTypeLabelExpectedTypes', '{lastType}形式のファイルがアップロードできます')
 
     // 投稿画面
     $('select[id="subject"]').on('change', function () {
@@ -53,4 +57,15 @@
             }
         });
     })
+
+    // var sidebarToggle = $('#sidebar-toggle');
+    // sidebarToggle.addEventListener('click', function () {
+    //     if (sidebar.classList.contains('contracted')) {
+    //         sidebar.classList.remove('contracted');
+    //         localStorage.removeItem('sidebar', 'contracted');
+    //     } else {
+    //         sidebar.classList.add('contracted');
+    //         localStorage.setItem('sidebar', 'contracted');
+    //     }
+    // });
 }(jQuery));

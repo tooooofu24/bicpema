@@ -1,0 +1,8 @@
+.pagination {
+    justify-content: center;
+}
+
+.table td,
+.table th {
+    white-space: normal;
+}

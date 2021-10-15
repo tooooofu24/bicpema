@@ -42,6 +42,6 @@ class SubmitController extends Controller
         $post->user_id = auth()->id();
         $post->save();
 
-        return redirect('submit.index');
+        return redirect()->route('submit.index')->with('flash_message', '投稿が完了しました！');
     }
 }
