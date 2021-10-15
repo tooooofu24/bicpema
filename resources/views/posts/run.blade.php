@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div id='canvas' style="width : 100%; min-height :100vh;"></div>
+    <div id='canvas' style="width : 100vw; height :100vh;"></div>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
     <script src="{{ $post->js_url }}"></script>
 </body>
