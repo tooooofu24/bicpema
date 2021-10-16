@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->insert([
             [
-                'name' => 'toya',
+                'name' => '千葉陶也',
                 'email' => 'test@email.com',
                 'password' => bcrypt('password')
             ],
@@ -27,6 +27,6 @@ class UserSeeder extends Seeder
                 'password' => bcrypt('1345Kenn')
             ]
         ]);
-        $users = User::factory()->count(20)->create();
+        // $users = User::factory()->count(20)->create();
     }
 }

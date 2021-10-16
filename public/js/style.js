@@ -1,4 +1,4 @@
-(function ($) {
+$(function () {
 
     // FilePondの設定
     $.fn.filepond.registerPlugin(FilePondPluginImagePreview);
@@ -17,7 +17,23 @@
     js_pond.filepond('acceptedFileTypes', ['text/javascript']);
     js_pond.filepond('storeAsFile', true);
     js_pond.filepond('labelFileTypeNotAllowed', 'JSファイルを選択してください！');
-    js_pond.filepond('fileValidateTypeLabelExpectedTypes', '{lastType}形式のファイルがアップロードできます')
+    js_pond.filepond('fileValidateTypeLabelExpectedTypes', '{lastType}形式のファイルがアップロードできます');
+
+    //リサイズされたときの処理
+    var timer = false;
+    $(window).on('resize', function () {
+        // run画面以外の時と全画面の時はリロードしない
+        if (location.pathname.substr(-3, 3) !== 'run' || document.fullscreen) {
+            return false;
+        }
+        if (timer !== false) {
+            clearTimeout(timer);
+        }
+        // 200ms毎にリロードしているか判定
+        timer = setTimeout(function () {
+            location.reload()
+        }, 200);
+    })
 
     // 投稿画面
     $('select[id="subject"]').on('change', function () {
@@ -58,6 +74,7 @@
         });
     })
 
+
     // var sidebarToggle = $('#sidebar-toggle');
     // sidebarToggle.addEventListener('click', function () {
     //     if (sidebar.classList.contains('contracted')) {
@@ -68,4 +85,4 @@
     //         localStorage.setItem('sidebar', 'contracted');
     //     }
     // });
-}(jQuery));
+});

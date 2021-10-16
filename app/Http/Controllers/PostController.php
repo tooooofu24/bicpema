@@ -14,12 +14,15 @@ class PostController extends Controller
         return view('top', compact('posts'));
     }
 
+    // 詳細画面
     public function showPost($id)
     {
         $post = Post::with('area', 'user')->find($id);
-        return view('posts.index', compact('post'));
+        $recomendedPosts = Post::inRandomOrder()->take(3)->get();
+        return view('posts.index', compact('post', 'recomendedPosts'));
     }
 
+    // 実行画面
     public function run($id)
     {
         $post = Post::find($id);

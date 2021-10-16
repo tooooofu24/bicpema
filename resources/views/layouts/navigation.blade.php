@@ -146,14 +146,6 @@
         </div>
     </nav>
     <main class="content">
-        {{-- フラッシュメッセージ --}}
-        @if(session('flash_message'))
-        <div class="mx-5">
-            <div class="alert alert-info" role="alert">
-                {{ session('flash_message') }}
-            </div>
-        </div>
-        @endif
         <div class="row py-2">
             <div class="col">
                 <button id="sidebar-toggle" class="sidebar-toggle me-3 btn btn-icon-only d-none d-lg-inline-block align-items-center justify-content-center">
@@ -194,6 +186,14 @@
                 </div>
             </div>
         </div>
+        {{-- フラッシュメッセージ --}}
+        @if(session('flash_message'))
+        <div class="">
+            <div class="alert alert-info" role="alert">
+                {{ session('flash_message') }}
+            </div>
+        </div>
+        @endif
         @yield('content')
     </main>
 </body>
