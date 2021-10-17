@@ -74,6 +74,12 @@ $(function () {
         });
     })
 
+    // 実行画面全画面表示
+    $('.expand').on('click', function () {
+        var canvas = document.getElementById('canvas').firstElementChild;
+        canvas.requestFullscreen();
+    })
+
 
     // var sidebarToggle = $('#sidebar-toggle');
     // sidebarToggle.addEventListener('click', function () {

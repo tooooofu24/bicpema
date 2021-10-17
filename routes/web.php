@@ -21,6 +21,10 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/', [App\Http\Controllers\SubmitController::class, 'index'])->name('index');
         Route::post('/', [App\Http\Controllers\SubmitController::class, 'store'])->name('store');
     });
+    // マイページ
+    Route::group(['prefix' => 'mypage', 'as' => 'mypage.'], function () {
+        Route::get('/', [App\Http\Controllers\MypageController::class, 'index'])->name('index');
+    });
 });
 
 // 表示

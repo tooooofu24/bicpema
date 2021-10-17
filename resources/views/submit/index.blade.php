@@ -1,6 +1,14 @@
 @extends('layouts.navigation')
 
 @section('content')
+<div class="pt-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+            <li class="breadcrumb-item"><a href="{{ route('posts.index') }}"><span class="fas fa-home"></span></a></li>
+            <li class="breadcrumb-item active" aria-current="page">投稿する</li>
+        </ol>
+    </nav>
+</div>
 <div class="card">
     <div class="card-header">
         <h1 class="fs-4 m-0">投稿</h1>

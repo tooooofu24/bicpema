@@ -1,7 +1,15 @@
 @extends('layouts.navigation')
 
 @section('content')
-<div class="mb-3">
+<div class="pt-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+            <li class="breadcrumb-item"><a href="{{ route('posts.index') }}"><span class="fas fa-home"></span></a></li>
+            <li class="breadcrumb-item active" aria-current="page">投稿詳細</li>
+        </ol>
+    </nav>
+</div>
+<div class="my-3">
     <a href="{{ route('posts.index') }}" class="btn btn-primary"><i class="fas fa-backward"></i>　戻る</a>
 </div>
 <div class="row">
