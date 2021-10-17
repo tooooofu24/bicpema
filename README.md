@@ -1,64 +1,37 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+## 「Bic Pema」とは
+理科や数学を「視覚的に」学習することができるWEBアプリケーションです。理科や数学の実験をWEBページで行うことができます。   
+名前は「**bi**ology」、「**c**hemistry」、「**p**hygics」、「**e**arth」、「**ma**th」の頭文字をとっています。  
+## 作った経緯
+理科教育を専攻している友達に誘われて作りました。  
+役割としては私がWEBページの機能を、友達は教材作りを担当しています。
+## サービスの機能
+主な機能は2つです。  
+- 実験の実行
+- 実験の投稿
+## 実験の表示方法
+実験に関しては「[p5.js](https://p5js.org/)」というJavaScriptライブラリを用いて表示しています。  
+投稿する際もp5.jsで動くコード(jsファイル)であれば投稿して動かすことができます。
+## 実験画面
+[こちら](https://bicpema.jpn.org/posts/1/run)が実験画面になります。  
+全画面にも対応しており、右下のアイコンをクリックすると全画面で表示します。
+![image](https://user-images.githubusercontent.com/64852221/137614977-8c86858c-a650-49ea-9273-56e73d274b84.png)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 投稿画面
+[こちら](https://bicpema.jpn.org/submit)が投稿画面になります。  
+jQueryでフロント側でのバリデーションを実装しており、分野は教科と学年に対応した分野だけを表示しています。  
+![image](https://user-images.githubusercontent.com/64852221/137615160-0abb1522-1169-448b-89c5-c9701e2da8bc.png)  
+また、[File Pond](https://pqina.nl/filepond/)というライブラリを使用しており、ファイルのアップロードが綺麗になっています。  
+![image](https://user-images.githubusercontent.com/64852221/137615253-bf8566ea-3fb9-4052-a837-c189e5d1d625.png)
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 工夫した点
+##### レスポンスを全て数値で管理した
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+　　
+## 使用技術
+- Laravel 8.61.0
+- Bootstrap 5.0
+- [LINE Messaging API](https://developers.line.biz/ja/services/messaging-api/)
+- MySQL
+- Git
+- [Poke API](https://pokeapi.co/)
