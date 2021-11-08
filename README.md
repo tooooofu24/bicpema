@@ -23,15 +23,13 @@ jQueryでフロント側でのバリデーションを実装しており、分�
 また、[File Pond](https://pqina.nl/filepond/)というライブラリを使用しており、ファイルのアップロードが綺麗になっています。  
 ![image](https://user-images.githubusercontent.com/64852221/137615253-bf8566ea-3fb9-4052-a837-c189e5d1d625.png)
 
-
-## 工夫した点
-##### レスポンスを全て数値で管理した
-
+<!-- ## 工夫した点
+##### レスポンスを全て数値で管理した -->
 　　
 ## 使用技術
 - Laravel 8.61.0
-- Bootstrap 5.0
-- [LINE Messaging API](https://developers.line.biz/ja/services/messaging-api/)
+- [p5.js](https://p5js.org/)
+- [File Pond](https://pqina.nl/filepond/)
+- jQuery
 - MySQL
 - Git
-- [Poke API](https://pokeapi.co/)
