@@ -20,6 +20,7 @@ class PostSeeder extends Seeder
             [20, '光の見え方', 'https://dl.dropboxusercontent.com/s/51ete0ydx3a3d8l/RGB.js', 'https://live.staticflickr.com/65535/51591712741_45613c6545_k.jpg', 'https://github.com/ohiaeni/physics_simulations_processing.git', '光の見え方のシミュレーション教材です。'],
             [17, 'ばねの単振動', 'https://dl.dropboxusercontent.com/s/l8qesblshicu88t/spring.js', 'https://live.staticflickr.com/65535/51592371899_c9514c2fa2_k.jpg', 'https://github.com/ohiaeni/physics_simulations_processing.git', 'ばねの単振動のシミュレーション教材です。'],
             [20, '波の干渉', 'https://dl.dropboxusercontent.com/s/gldk7bfd5sltbt1/wave_interference.js', 'https://live.staticflickr.com/65535/51590882657_a98f7161ed_k.jpg', 'https://github.com/ohiaeni/physics_simulations_processing.git', '波の干渉のシミュレーション教材です。'],
+            [17, '振り子', 'https://dl.dropboxusercontent.com/s/hvlp603q5tc8pub/pendulum.js', 'https://live.staticflickr.com/65535/51692118061_b87d0dd266_o.png', 'https://github.com/ohiaeni/physics_simulations_processing.git', '振り子のシミュレーション教材です。'],
         ];
         foreach ($data as $v) {
             $post = new Post;
